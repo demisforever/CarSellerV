@@ -1,0 +1,56 @@
+<h1>Listing vehicles</h1>
+<tr>
+<th><%= dollar_oficial_compra  %></th>
+<th></th>
+<th>dollar oficial venta: <%= dollar_oficial_venta  %></h1>
+<th></th>
+<th>dollar blue compra: <%= dollar_blue_compra  %></th>
+<th></th>
+<th>dollar blue venta: <%= dollar_blue_venta  %></th>
+</tr>
+
+
+<table class="table table-hover table-striped">
+  <thead bgcolor="#ECEDEF">
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Vehicle type</th>
+      <th>Customer</th>
+      <th>precio</th>
+      <th>precio dollar</th>
+      <th>Amount Km</th>
+      <th>fuel Type</th>
+      <th>model Year</th>
+      
+      <th></th>
+    </tr>
+  </thead>
+
+
+<tbody>
+  <% @vehicles.each do |vehicle| %> 
+  <!-- success(colorido), , :info -->
+    <tr class="<%=cycle :error, :warning %>">
+      <th><%= vehicle.name %></th>
+      <th><%= vehicle.brand.name %></th>
+      <th><%= vehicle.vehicle_type.name %></th>
+      <th><%= vehicle.customer.name %></th>
+      <th><%= vehicle.precio %></th>
+      <th><%= vehicle.amount_in_pesos %></th>
+      <th><%= vehicle.amount_km %></th>
+      <th><%= vehicle.fuel_type %></th>
+      <th><%= vehicle.model_year %></th>
+      
+      
+      <th><%= link_to 'Show', vehicle %></th>
+      <th><%= link_to 'Edit', edit_vehicle_path(vehicle) %></th>
+      <th><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></th>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= link_to icon('plus')+'New Vehicle', new_vehicle_path, class: 'btn btn-success' %>

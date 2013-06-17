@@ -46,14 +46,28 @@
 <div class="tabbable tabs-left">    
     <!--<div class="row">-->
     <div class="tabbable tabs-left">
-      <!--<div id="menu" class="span2">-->
+      <!--<div id="menu" class="span2"> tabs-->
         <ul class="nav nav-tabs">
           <li><%= link_to strongify('Inicio'), root_url %></li> <%#link_to es un kelper  %>
           <li><%= link_to "Marca", brands_path %></li>
           <li><%= link_to "Clientes", customers_path %></li>
           <li><%= link_to "Tipo de Vehiculo", vehicle_types_url %></li>
           <li><%= link_to "Vehiculos y detalles", vehicles_path %></li>
-          <li><%= link_to "Accesorios", accesorios_path %></li>
+          <li><%= link_to "Accesorios", accessories_path %></li>
+
+
+
+      <dl>
+        <dt>Información del Dollar:</dt>
+        <dt>Oficial:</dt>
+        <dd>compra: <%= dollar_oficial_compra  %></dd>
+        <dd>venta: <%= dollar_oficial_venta  %></dd>
+        <dt>Blue:</dt>
+        <dd>compra: <%= dollar_blue_compra  %></dd>
+        <dd>venta: <%= dollar_blue_venta  %></dd>
+
+      </dl>
+
         </ul>
       <!--</div> <!-- Menu-->
 

@@ -1,0 +1,21 @@
+<h1>Lista de accesorios</h1>
+
+<table class="table table-hover table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Nationality</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accessories.each do |a| %>
+  <tr>
+    <td><%= a.name %></td>
+    <td><%= a.price %></td>
+    <td><%= a.nationality %></td>
+  </tr>
+<% end %>
+</table>
+

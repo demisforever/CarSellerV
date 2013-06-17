@@ -28,6 +28,8 @@ gem 'jquery-rails'
 gem 'dollarizeme'
 gem 'thin' #agregamos una nueva gema
 
+gem 'rabl'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
